@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edison Puerta | QA Analyst</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main class="contenedor-principal">
+
+        <!-- ========= SECCIÓN 1: HERTO ======== -->
+        <section class="contenido-hero">
+            <div class="etiqueta-estado">
+                <span class="punto-pulso"></span>
+                Disponible para Pruebas y Desarrollo
+            </div>
+
+            <h1 class="nombre-principal">Edison Puerta Arroyave</h1>
+
+            <p class="subtitulo-profesional">Analista de QA de software & Desarrollador</p>
+
+            <p class="descripción-perfil">
+                Con más de un año y medio de experiencia en el aseguramiento de calidad de software,
+                me enfoco en garantizar la estabilidad y usabilidad de aplicaciones web y móviles.
+                Mis bases técnicas en programación me permiten entender el código fuente, optimizando
+                el reporte de defectos y la colaboración con los equipos de desarrollo.
+            </p>
+
+            <div class="grupo-botones">
+                <a href="#proyectos" class="boton-primario">Ver Proyectos (QA Sandbox)</a>
+                <a href="contacto" class="boton-secundario"><Contáctame/a>
+            </div>
+        </section>
+
+        <hr class="separador">
+
+        <!-- ========= SECCIÓN 2: SOBRE MÍ ======== -->
+        <section id="sobre-mi" class="seccion-bloque">
+            <h2 class="titulo-seccion">Sobre Mí & Competencias</h2>
+
+            <div class="cuadricula-perfil">
+                <div class="tarjeta-info">
+                    <h3>Mi Enfoque como QA</h3>
+                    <p>
+                        Me apasiona encontrar esos comportamientos inesperados en el software antes de que lleguen al usuariofinal. Mi experiencia en entornos laborales me ha enseñado que el QA no es solo reportar fallas, sino ser un puente de comunicación claro entre las necesidades del negocio y el equipo que escribe el código.
+                    </p>
+                </div>
+
+                <div class="tarjeta info">
+                    <h3>Caja de Herramientas (QA)</h3>
+                    <ul class="lista-skills">
+                        <li><span>✓</span>Pruebas funcionales (Caja Negra)</li>
+                        <li><span>✓</span>Gestion de Defectos (Jira / Trello)</li>
+                        <li><span>✓</span>Diseño de casos de prueba & Checklist</li>
+                        <li><span>✓</span>Pruebas de Regresión y Humo</li>
+                        <li><span>✓</span>Inspección del Dom (HTML / CSS)</li>
+                    </ul>
+                </div>
+
+                <div class="tarjeta-info">
+                    <h3>Bases Técnicas</h3>
+                    <p class="texto-tecnologíco">
+                        He interactuado y conozco la estructura de tecnologías como <strong>HTML, CSS, JavaScript, React, React Native, php y Python</strong>. Aunque mi foco no es el desarrollo, este conocimiento me permite entender la consola del navegador, leer logs de errores y automatizar tareas básicas.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr class="separador">
+
+        <!-- ========= SECCIÓN 3: PROYECTOS ======== -->
+        <section id="proyectos" class="seccion-bloque">
+            <h2 class="titulo-seccion">QA Sandbox (Mis proyectos)</h2>
+            <p class="subtitulo-seccion">Selecciona un entorno para ver cómo diseño y ejecuto mis estrategias de prueba.</p>
+
+            <!-- Botones de las pestañas -->
+            <div class="contenedor-pestañas">
+                <button class="btn-pestaña activa" data-entorno="web">🌐 Pruebas Web</button>
+                <button class="btn-pestaña" data-entorno="mobile">📱 Pruebas Mobile</button>
+                <button class="btn-pestaña" data-entorno="apis">🔌 Pruebas de APIs</button>
+            </div>
+
+            <!-- Contenedor dinámico de proyectos-->
+            <div class="contenedor-proyectos">
+                <div class="tarjeta-proyecto">
+                    <span class="tag-entorno">Web Testing</span>
+                    <h3>Auditoria de Funcionalidad: Flujo de Carrito de Compras</h3>
+                    <p>Simulación de pruebas de caja negra en un comercio electronico. Diseñe la matriz de casos de pruebay ejecuté pruebas de regresión para asegurar que los descuentos se aplicaran correctamente en el checkout.</p>
+                    <div class="detalles-qa">
+                        <strong>Artefactos:</strong> Plan de pruebas, Reporte de Bugs en Jira, Matriz de conformidad.
+                    </div>
+                </div>
+            </div>
+
+            <div class="proyecto-contenido" id="proyecto-mobile">
+                <div class="tarjeta-proyecto">
+                    <span class="tag-entorno">Mobile Testing</span>
+                    <h3>Checklist de Humo: App Móvil en React Native</h3>
+                    <p>Pruebas específicas para dispositivos móviles simulando interrupciones de red (pérdida de Wi-Fi), cambios de orientación de pantalla y validación de diseño responsivo en diferentes resoluciones de pantalla.</p>
+                    <div class="detalles-qa">
+                        <strong>Artefactos:</strong> Checklist de Pruebas de Humo, Capturas de logs de error.
+                    </div>
+                </div>
+            </div>
+
+            <se class="proyecto-contenido" id="proyecto-apis">
+                <div class="tarjeta-proyecto">
+                    <span class="tag-entorno">API Testing</span>
+                    <h3>Validación de Endpoints con Postman: Módulo de autenticación</h3>
+                    <p>Pruebas funcionales a nivel de servicios (Backend) para verificar las respuestas del servidor (códigos HTTP 200, 400, 401) al enviar datos correctos en un formulario de login, analizando las respuestas en formato JSON.</p>
+                    <div class="detalles-qa">
+                        <strong>Artefactos:</strong> Colección de Postman, Reporte de estado de Endpoints.
+                    </div>
+                </div>
+        </section>
+
+    </main>
+
+    <!-- Cargo Script interactivo-->
+    <script src="script.js"></script>
+    
+</body>
+</html>
