@@ -1,0 +1,436 @@
+/* ==========================================================================
+    1. CONFIGURACIÓN GENERAL Y VARIABLES (LOOK CYBERPUNK OSCURO)
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Hace que el salto entre secciones sea suave */
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #020617; /* el Fondo azul pizarra profundo (slate-950) */
+    color: #f1f5f9; /* Texto blanco suave */
+    min-height: 1.5;
+}
+
+/* Contenedor que centra el portafolio en la pantalla */
+.contenedor-principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 24px;
+    max-width: 100%;
+}
+
+/* Lineas sutiles de separación entre bloques */
+.separador {
+    border: 0;
+    height: 1px;
+    background: -o-linear-gradient(to right, transparent, rgba(6, 182, 212, 0.2), transparent);
+    margin: 60px;
+    width: 100%;
+    max-width: 768px;
+}
+
+.seccion-bloque {
+    width: 100%;
+    max-width: 768px;
+}
+
+.titulo-seccion {
+    font-size: 26px;
+    font-weight: 700;
+    color: #f8fafc;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+/* ==========================================================================
+    2. ESTILOS SECCIÓN 1: HERO (PRESENTACIÓN CON ANIMACIÓN)
+   ========================================================================== */
+
+.contenido-hero {
+    max-width: 768px;
+    text-align: center;
+    padding-top: 40px;
+}
+
+/* Etiqueta superior de disponibilidad */
+.etiqueta-estado {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    border-radius: 9999px;
+    background-color: rgba(6, 182, 212 0.08);
+    border: 1px solid rgba(6,182, 212, 0.25);
+    color: #22d3ee; /* Cyan brillante */
+    font-size: 12px;
+    font-family: monospace;
+    text-transform: uppercase;
+    margin-bottom: 28px;
+}
+
+.punto-pulso {
+    width: 8px;
+    height: 8px;
+    background-color: #22d3ee;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #22d3ee;
+}
+
+/* Nombre con degradado en movimiento suave e infinito */
+.nombre-principal {
+    font-family: clamp(2.5rem, 5vw, 3.8rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+
+    /* Creo el degradado un poco más ancho (200%) para poder moverlo */
+    background: linear-gradient(to right, #ffffff, #cbd5e1, #22d3ee, #ffffff);
+    background-size: 200% auto;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    /* Animación: dura 6 segundos, es lineal y se repite para siempre */
+    animation: movimientoDegradado 6s linear infinite;
+}
+
+/* Motor del movimiento del degradado */
+@keyframes brilloDegradado {
+    0% {
+        background-position: 0% center;
+    }
+    100% {
+        background-position: -200% center; /* Muevo el fondo completamente a la izquierda */
+    }
+}
+
+.subtitulo-profesional {
+    font-size: clamp(1.2rem, 3vw, 1.4rem);
+    font-weight: 500;
+    color: #94a3b8;
+    font-family: monospace;
+    margin-bottom: 24px;
+}
+
+.descripción-perfil {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto 36px auto;
+}
+
+/* Botones principales del Hero */
+.grupo-botones {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+}
+
+.boton-primario {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #06b6d4;
+    color: #020617;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px -5px rgba(6, 182, 212, 0.3);
+    transition: all 0.2s ease;
+}
+
+.boton-primario:hover {
+    background-color: #22d3ee;
+    transform: translateY(-2px);
+}
+
+.boton-secundario {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #0f172a;
+    color: #cbd5e1;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 1px solid #1e293b;
+    transition: all 0.2s ease;
+}
+
+.boton-secundario:hover {
+    background-color: #1e293b;
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+    3. ESTILOS SECCIÓN 2: SOBRE MÍ Y HABILIDADES
+   ========================================================================== */
+
+.cuadricula-perfil {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.tarjeta-info {
+    background-color: #0b1329; /* Contraste azul oscuro */
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.tarjeta-info h3 {
+    font-size: 18px;
+    color: #22d3ee;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.tarjeta-info p {
+    font-size: 15px;
+    color: #94a3b8;
+    line-height: 1.6;
+}
+
+.lista-skills {
+    font-size: none;
+}
+
+.lista-skills li {
+    font-size: 15px;
+    color: #cbd5e1;
+    margin-bottom: 1opx;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lista-skills span {
+    color: #06b6d4;
+    font-weight: bold;
+}
+
+.texto-tecnologíco strong {
+    color: #e2e8f0;
+}
+
+/* ==========================================================================
+    4. ESTILOS SECCIÓN 3: QA SANDBOX (PROYECTOS CON PESTAÑAS)
+   ========================================================================== */
+
+.subtitulo-seccion {
+    color: #94a3b8;
+    margin-bottom: 24px;
+    font-size: 15px;
+}
+
+.contenedor-pestañas {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 30px;
+    justify-content: flex-start;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 12px;
+    overflow-x: auto; /* Permite scroll horizontal si la pantalla es muy chica */
+}
+
+.btn-pestaña {
+    background: none;
+    border: none;
+    color: #64748b;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 6px;
+    white-space: nowrap;
+}
+
+.btn-pestaña:hover {
+    color: #e2e8f0;
+    background-color: #0f172a;
+}
+
+.btn-pestaña.activa {
+    color: #22d3ee;
+    background-color: rgba(6, 182, 212, 0.1);
+    border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.proyecto-contenido {
+    display: none; /*Oculta por defecto */
+}
+
+.proyecto-contenido.activo {
+    display: block; /* Muestra el contenido seleccionado */
+    animation: fadeIn 0.4s ease;
+}
+
+.tarjeta-proyecto {
+    background: linear-gradient(135deg, #0b1329 0%, #020617 100%);
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    padding: 32px;
+}
+
+.tag-entorno {
+    display: inline-block;
+    font-size: 11px;
+    font-family: monospace;
+    color: #06b6d4;
+    background-color: rgba(6, 182, 212, 0.05);
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid rgba(6, 182, 212, 0.1);
+    margin-bottom: 16px;
+}
+
+.tarjeta-proyecto h3 {
+    font-size: 20px;
+    color: #f8fafc;
+    margin-bottom: 12px;
+}
+
+.tarjeta-proyecto p {
+    font-size: 15px;
+    color: #94a3b8;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.detalles-qa {
+    background-color: #0f172a;
+    border-left: 4px solid #06b6d4;
+    padding: 12px;
+    border-radius: 0 8px 8px 0;
+    font-size: 14px;
+    color: #cbd5e1;
+}
+
+/* Animación de entrada suave */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ==========================================================================
+    5. ESTILOS SECCIÓN 4: CONTACTO INTERNACIONAL MÓVIL
+   ========================================================================== */
+
+.contenedor-contacto {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Si la pantalla mide más de 650px, pone las dos tarjetas lado a lado */
+@media (min-width: 650px) {
+    .contenedor-contacto {
+        flex-direction: row;
+    }
+    .tarjeta-contacto {
+        flex: 1; 
+    }
+}
+
+.tarjeta-contacto {
+    background-color: #0b1329;
+    border: 1px solid #1e293b;
+    border-radius: 12px;
+    padding: 28px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icono-contacto {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+.tarjeta-contacto h3 {
+    font-size: 18px;
+    color: #22d3ee;
+    margin-bottom: 8px;
+}
+
+.tarjeta-contacto p {
+    font-size: 14px;
+    color: #94a3b8;
+    line-height: 1.5;
+    margin-bottom: 24px;
+}
+
+.boton-contacto-accion {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #06b6d4;
+    color: #020617;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: background-color 0.2s;
+    width: 100%;
+}
+
+.boton-contacto-accion:hover {
+    background-color: #22d3ee;
+}
+
+.enlaces-directos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.link-red {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px;
+    background-color: #0f172a;
+    border: 1px solid #1e293b;
+    border-radius: 6px;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.link-red:hover {
+    background-color: #22d3ee;
+    color: #06b6d4;
+}
+
+.link-red-whatsapp {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px;
+    background-color: #0b2e1b;
+    border: 1px solid #15803d;
+    border-radius: 6px;
+    transition: all 0.2s;
+    text-align: center;
+}
+
+.link-red-whatsapp:hover {
+    color: #4ade80;
+    border-color: #22c55e;
+    background-color: #14532d;
+}
