@@ -13,7 +13,8 @@ body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     background-color: #020617; /* el Fondo azul pizarra profundo (slate-950) */
     color: #f1f5f9; /* Texto blanco suave */
-    min-height: 1.5;
+    min-height: 100vh;
+    line-height: 1.5;
 }
 
 /* Contenedor que centra el portafolio en la pantalla */
@@ -82,31 +83,34 @@ body {
     box-shadow: 0 0 8px #22d3ee;
 }
 
-/* Nombre con degradado en movimiento suave e infinito */
+/* Nombre con degradado en movimiento suave e infinito (FIXED) */
 .nombre-principal {
-    font-family: clamp(2.5rem, 5vw, 3.8rem);
+    font-size: clamp(2.3rem, 5vw, 3.8rem); /* Corregido de font-family a font-size */
     font-weight: 800;
     letter-spacing: -1px;
     margin-bottom: 16px;
 
-    /* Creo el degradado un poco más ancho (200%) para poder moverlo */
-    background: linear-gradient(to right, #ffffff, #cbd5e1, #22d3ee, #ffffff);
+    /* Configuración exacta para el degradado en el texto */
+    background: linear-gradient(to right, #ffffff, #94a3b8, #22d3ee, #ffffff);
     background-size: 200% auto;
+    display: inline-block;
+    
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    text-fill-color: transparent !important;
 
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
-    /* Animación: dura 6 segundos, es lineal y se repite para siempre */
-    animation: movimientoDegradado 6s linear infinite;
+    /* Sincronizado el nombre de la animación */
+    animation: brilloDegradado 6s linear infinite;
 }
 
-/* Motor del movimiento del degradado */
+/* Motor del movimiento del degradado (Sincronizado) */
 @keyframes brilloDegradado {
     0% {
         background-position: 0% center;
     }
     100% {
-        background-position: -200% center; /* Muevo el fondo completamente a la izquierda */
+        background-position: 200% center;
     }
 }
 
@@ -118,7 +122,7 @@ body {
     margin-bottom: 24px;
 }
 
-.descripción-perfil {
+.descripcion-perfil {
     font-size: 16px;
     line-height: 1.6;
     color: #94a3b8;
@@ -215,7 +219,7 @@ body {
     font-weight: bold;
 }
 
-.texto-tecnologíco strong {
+.texto-tecnologico strong {
     color: #e2e8f0;
 }
 
