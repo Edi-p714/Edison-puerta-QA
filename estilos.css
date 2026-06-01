@@ -31,7 +31,7 @@ body {
     border: 0;
     height: 1px;
     background: -o-linear-gradient(to right, transparent, rgba(6, 182, 212, 0.2), transparent);
-    margin: 60px;
+    margin: 60px 0;
     width: 100%;
     max-width: 768px;
 }
@@ -208,7 +208,7 @@ body {
 .lista-skills li {
     font-size: 15px;
     color: #cbd5e1;
-    margin-bottom: 1opx;
+    margin-bottom: 10px;
     display: flex;
     align-items: center;
     gap: 10px;
@@ -233,7 +233,7 @@ body {
     font-size: 15px;
 }
 
-.contenedor-pestañas {
+.contenedor-pestanas {
     display: flex;
     gap: 8px;
     margin-bottom: 30px;
@@ -243,7 +243,7 @@ body {
     overflow-x: auto; /* Permite scroll horizontal si la pantalla es muy chica */
 }
 
-.btn-pestaña {
+.btn-pestana {
     background: none;
     border: none;
     color: #64748b;
@@ -256,12 +256,12 @@ body {
     white-space: nowrap;
 }
 
-.btn-pestaña:hover {
+.btn-pestana:hover {
     color: #e2e8f0;
     background-color: #0f172a;
 }
 
-.btn-pestaña.activa {
+.btn-pestana.activa {
     color: #22d3ee;
     background-color: rgba(6, 182, 212, 0.1);
     border: 1px solid rgba(6, 182, 212, 0.2);
@@ -304,7 +304,6 @@ body {
 .tarjeta-proyecto p {
     font-size: 15px;
     color: #94a3b8;
-    font-size: 15px;
     line-height: 1.6;
     margin-bottom: 20px;
 }
